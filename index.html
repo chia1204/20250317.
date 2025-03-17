@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seaweed Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      top: 10%; /* 調整這裡的數值來改變 iframe 的垂直位置 */
+      left: 10%; /* 調整這裡的數值來改變 iframe 的水平位置 */
+      width: 80%; /* 調整這裡的數值來改變 iframe 的寬度 */
+      height: 80%; /* 調整這裡的數值來改變 iframe 的高度 */
+      border: none;
+      z-index: 2; /* 確保 iframe 在背景 */
+    }
+    #p5-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /* 讓 p5.js 畫布佈滿整個畫面 */
+      height: 100%;
+      z-index: 1; /* 確保 p5.js 畫布在前景 */
+    }
+  </style>
+</head>
+<body>
+  <iframe src="https://www.tku.edu.tw"></iframe>
+  <div id="p5-canvas"></div>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
